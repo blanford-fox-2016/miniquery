@@ -53,46 +53,46 @@
       console.log(SweetSelector.select('a'))
     }
 
-    function demoDOM() {
-      DOM.hide('.klass')
-      DOM.show('.klass')
-      DOM.removeClass('.klass', 'shaded')
-      DOM.addClass('.klass', 'shaded')
-    }
-
-    function demoEventDispatcher() {
-      EventDispatcher.on('.klass', 'click', function() {
-        console.log("Awesome")
-      })
-    }
-
-    function demoAjax() {
-      AjaxWrapper.request({
-        url: 'http://localhost:3000/',
-        type: 'GET',
-        success: function(data) {
-          console.log("Success: ", data)
-        },
-        fail: function() {
-          console.log("ERROR")
-        }
-      })
-    }
-
-    function demoMiniQuery() {
-      // miniquery
-      miniquery("#eyed").hide()
-      setTimeout(function() {
-        miniquery("#eyed").show()
-      }, 2000)
-    }
-
-    function demoAlias() {
-      $("#eyed").hide()
-      setTimeout(function() {
-        $("#eyed").show()
-      }, 2000)
-    }
+    // function demoDOM() {
+    //   DOM.hide('.klass')
+    //   DOM.show('.klass')
+    //   DOM.removeClass('.klass', 'shaded')
+    //   DOM.addClass('.klass', 'shaded')
+    // }
+    //
+    // function demoEventDispatcher() {
+    //   EventDispatcher.on('.klass', 'click', function() {
+    //     console.log("Awesome")
+    //   })
+    // }
+    //
+    // function demoAjax() {
+    //   AjaxWrapper.request({
+    //     url: 'http://localhost:3000/',
+    //     type: 'GET',
+    //     success: function(data) {
+    //       console.log("Success: ", data)
+    //     },
+    //     fail: function() {
+    //       console.log("ERROR")
+    //     }
+    //   })
+    // }
+    //
+    // function demoMiniQuery() {
+    //   // miniquery
+    //   miniquery("#eyed").hide()
+    //   setTimeout(function() {
+    //     miniquery("#eyed").show()
+    //   }, 2000)
+    // }
+    //
+    // function demoAlias() {
+    //   $("#eyed").hide()
+    //   setTimeout(function() {
+    //     $("#eyed").show()
+    //   }, 2000)
+    // }
   </script>
 
 </html>
