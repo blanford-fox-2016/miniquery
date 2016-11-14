@@ -88,6 +88,35 @@
       setTimeout(function() {
         miniquery("#eyed").show()
       }, 2000)
+
+      // Selectors
+      miniquery('.klass')
+      miniquery('#eyed')
+      miniquery('a')
+
+      // DOM Manipulations
+      miniquery('.klass').hide()
+      miniquery('.klass').show()
+      miniquery('.klass').addClass()
+      miniquery('.klass').removeClass()
+
+      // Event Dispatch
+      miniquery('.klass').on('click', function(){
+        console.log(`awesome !`)
+      })
+
+      // AJAX
+      // miniquery().ajax({
+      //   url: 'http://swapi.co/api/starships/9',
+      //   type: 'GET',
+      //   success: function(data) {
+      //     console.log("Success: ", data)
+      //   },
+      //   fail: function() {
+      //     console.log("ERROR")
+      //   }
+      // })
+
     }
 
     function demoAlias() {
