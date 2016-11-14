@@ -54,10 +54,17 @@
     }
 
     function demoDOM() {
+      console.log('Demo DOM');
       DOM.hide('.klass')
-      DOM.show('.klass')
-      DOM.removeClass('.klass', 'shaded')
-      DOM.addClass('.klass', 'shaded')
+      setTimeout(function(){
+        DOM.show('.klass')
+      }, 2000)
+      setTimeout(function(){
+        DOM.removeClass('.klass', 'shaded')
+      }, 2500)
+      setTimeout(function(){
+        DOM.addClass('.klass', 'shaded')
+      }, 3000)
     }
 
     function demoEventDispatcher() {
@@ -68,7 +75,7 @@
 
     function demoAjax() {
       AjaxWrapper.request({
-        url: 'http://localhost:3000/',
+        url: 'http://swapi.co/api/people/1/',
         type: 'GET',
         success: function(data) {
           console.log("Success: ", data)
