@@ -68,7 +68,7 @@
 
     function demoAjax() {
       AjaxWrapper.request({
-        url: 'http://localhost:3000/',
+        url: 'https://restcountries.eu/rest/v1/all',
         type: 'GET',
         success: function(data) {
           console.log("Success: ", data)
