@@ -15,7 +15,6 @@
         color: gray;
       }
     </style>
-    <script src="lib/miniquery.js"></script>
   </head>
 
   <body>
@@ -40,7 +39,7 @@
     </div>
 
   </body>
-
+  <script src="lib/miniquery.js"></script>
   <script>
     function demoSweetSelector() {
       console.log(`SweetSelector.select('#eyed')`)
@@ -54,10 +53,15 @@
     }
 
     function demoDOM() {
-      DOM.hide('.klass')
-      DOM.show('.klass')
-      DOM.removeClass('.klass', 'shaded')
+      // DOM.hide('.klass')
+      // setTimeout(function() {
+      //     DOM.show('.klass')
+      // }, 2000)
+
       DOM.addClass('.klass', 'shaded')
+      setTimeout(function() {
+        DOM.removeClass('.klass', 'shaded')
+      }, 2000)
     }
 
     function demoEventDispatcher() {
@@ -68,7 +72,7 @@
 
     function demoAjax() {
       AjaxWrapper.request({
-        url: 'http://localhost:3000/',
+        url: 'https://restcountries.eu/rest/v1/name/indonesia',
         type: 'GET',
         success: function(data) {
           console.log("Success: ", data)
@@ -88,9 +92,9 @@
     }
 
     function demoAlias() {
-      $("#eyed").hide()
+      $("a").hide()
       setTimeout(function() {
-        $("#eyed").show()
+        $("a").show()
       }, 2000)
     }
   </script>
