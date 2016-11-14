@@ -53,10 +53,10 @@
     }
 
     function demoDOM() {
-      // DOM.hide('.klass')
+      DOM.hide('.klass')
       // DOM.show('.klass')
       // DOM.removeClass('.klass', 'shaded')
-      DOM.addClass('.klass', 'shaded')
+      // DOM.addClass('.klass', 'shaded')
     }
 
     function demoEventDispatcher() {
@@ -67,7 +67,7 @@
 
     function demoAjax() {
       AjaxWrapper.request({
-        url: 'http://localhost:3000/',
+        url: 'https://restcountries.eu/rest/v1/name/indonesia',
         type: 'GET',
         success: function(data) {
           console.log("Success: ", data)
