@@ -10,7 +10,6 @@
       .container {
         font-size: 2em;
       }
-
       .shaded {
         color: gray;
       }
@@ -34,41 +33,38 @@
 
     <div class="container">
       <div id="eyed">id: eyed</div>
-      <div class="klass">class: klass 1</div>
+      <div class="klass asd">class: klass 1</div>
       <a class="klass" href="#hello">Hello!</a>
       <div class="klass">class: klass 2</div>
     </div>
-
+      <p>test paragraph</p>
   </body>
 
   <script>
     function demoSweetSelector() {
       console.log(`SweetSelector.select('#eyed')`)
       console.log(SweetSelector.select('#eyed'))
-
       console.log(`SweetSelector.select('.klass')`)
       console.log(SweetSelector.select('.klass'))
-
       console.log(`SweetSelector.select('a')`)
       console.log(SweetSelector.select('a'))
+      console.log(`SweetSelector.select('p')`)
+      console.log(SweetSelector.select('p'))
     }
-
     function demoDOM() {
       DOM.hide('.klass')
       DOM.show('.klass')
       DOM.removeClass('.klass', 'shaded')
       DOM.addClass('.klass', 'shaded')
     }
-
     function demoEventDispatcher() {
       EventDispatcher.on('.klass', 'click', function() {
         console.log("Awesome")
       })
     }
-
     function demoAjax() {
       AjaxWrapper.request({
-        url: 'http://localhost:3000/',
+        url: 'http://pokeapi.co/api/v2/pokemon/1/',
         type: 'GET',
         success: function(data) {
           console.log("Success: ", data)
@@ -78,13 +74,25 @@
         }
       })
     }
-
     function demoMiniQuery() {
       // miniquery
       miniquery("#eyed").hide()
       setTimeout(function() {
         miniquery("#eyed").show()
       }, 2000)
+      // Selectors
+      miniquery('.klass')
+      miniquery('#eyed')
+      miniquery('a')
+      // DOM Manipulations
+      miniquery('.klass').hide()
+      miniquery('.klass').show()
+      miniquery('.klass').addClass()
+      miniquery('.klass').removeClass()
+      // Event Dispatch
+      miniquery('.klass').on('click', function(){
+        console.log(`awesome !`)
+      })
     }
 
     function demoAlias() {
