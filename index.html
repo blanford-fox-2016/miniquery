@@ -64,7 +64,8 @@
     }
     function demoAjax() {
       AjaxWrapper.request({
-        url: 'http://pokeapi.co/api/v2/pokemon/2/',
+        //will get data from pokemon api, acknowledge with bulbasaur data
+        url: 'http://pokeapi.co/api/v2/pokemon/1/',
         type: 'GET',
         success: function(data) {
           console.log("Success: ", data)
